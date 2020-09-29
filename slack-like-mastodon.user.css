@@ -16,6 +16,7 @@
 @var            checkbox removeTimelinePadding "メインカラムの余白を消す" 0
 @var            checkbox removeTootBorder "トゥート間のボーダーを消す" 0
 @var            checkbox removeAnnouncements "インスタンスからのお知らせを消す" 0
+@var            checkbox removeSearch "検索ボックスを削除" 0
 @var            checkbox reverseTimeline "新着トゥートを下に表示する（Experimental）" 0
 @var            checkbox enableTheme "Slackテーマを有効にする（Experimental）" 0
 @var            color columnBg "Column BG" #3F0E40
@@ -574,6 +575,12 @@
 
         if removeAnnouncements {
             .mods__announcements {
+                display: none !important;
+            }
+        }
+
+        if removeSearch {
+            .search {
                 display: none !important;
             }
         }
